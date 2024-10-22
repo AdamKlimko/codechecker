@@ -15,10 +15,18 @@ Base template for developing Django REST API apps
 2. `docker compose up`
 
 ## Frequent commands
-- add Django app
+- Add Django app
 
 `docker compose run --rm app sh -c "python manage.py startapp 'appname'"`
 
-- make db migrations after updating model
+- Make db migrations after updating model
 
 `docker compose run --rm app sh -c "python manage.py makemigrations"`
+
+- Run tests
+
+`docker compose run --rm app sh -c "python manage.py test"`
+
+- Run lint check 
+
+`docker compose run --rm app sh -c "python manage.py flake8"`
